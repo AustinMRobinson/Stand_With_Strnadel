@@ -1,0 +1,147 @@
+<?php
+if(isset($_POST['submit'])){
+    $to = "austinrobinsondesign@gmail.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $category = $_POST['category']
+    $category = $_POST['category2']
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
+?>
+  <html>
+  <head>
+    <title>Stand With Strnadel</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  </head>
+
+  <body>
+
+  <section id="logonav" class="clearfix">
+
+    <div class="container">
+      <div class="nav_logo">
+        <a href="/index.html"><img class="logo" src="/images/logo.svg" alt=""></a>
+      </div>
+  </div>
+
+  </section>
+
+  <nav class="clearfix">
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-xs-12">
+        <div class="nav_links">
+
+          <div class="row">
+            <ul>
+              <a href="about.html">
+              <div class="col-lg-3 col-md-3 col-xs-6 pages">
+                <li>Meet Cason</li>
+              </div></a>
+              <a href="team.html">
+                <div class="col-lg-3 col-md-3 col-xs-6">
+                  <li>Our Team</li>
+                </div>
+              </a>
+              <a href="media.html">
+              <div class="col-lg-3 col-md-3 col-xs-6">
+                <li>Media</li>
+              </a>
+              </div>
+              <a href="involved.html">
+              <div class="col-lg-3 col-md-3 col-xs-6">
+                <li>Get Involved</li>
+              </a>
+              </div>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  </nav>
+
+<section id="involved" class="clearfix">
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-12 col-md-12 col-xs-12">
+        <div class="section_header">
+          <h2>Get Involved</h2>
+          <h3>Contact Us</h3>
+        </div>
+      </div>
+
+
+      <div class="col-xd-12 col-md-12 col-xs-12">
+      <form action="" method="post">
+        <input placeholder="First Name" class="col-xd-12 col-md-12 col-xs-12" type="text" name="first_name"><br>
+        <input placeholder="Last Name" class="col-xd-12 col-md-12 col-xs-12" type="text" name="last_name"><br>
+        <input placeholder="Email" class="col-xd-12 col-md-12 col-xs-12" type="text" name="email"><br>
+        <br><textarea placeholder="Enter Message" class="col-xd-12 col-md-12 col-xs-12" rows="5" name="message" cols="30"></textarea><br>
+        <input class="center-block" type="submit" name="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+
+<footer class="footer2">
+
+<div class="container">
+
+<div class="col-lg-12 col-md-12 col-xs-12 footernav">
+    <ul class="col-lg-4 col-md-4 col-xs-6">
+      <li class="title">Navigation</li>
+      <li class="page">Home</li>
+      <li class="page">Meet Cason</li>
+      <li class="page">Our Team</li>
+      <li class="page">Media</li>
+      <li class="page">Get Involved</li>
+    </ul>
+    <ul class="col-lg-4 col-md-4 col-xs-6">
+      <li class="title">Social</li>
+      <li class="page">Twitter</li>
+      <li class="page">Instagram</li>
+      <li class="page">Facebook</li>
+      <li class="page">LinkedIn</li>
+    </ul>
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>

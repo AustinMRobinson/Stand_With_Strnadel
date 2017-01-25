@@ -1,0 +1,685 @@
+@font-face {
+    font-family: "College Block";
+    src: url("../fonts/College-Block.otf");
+}
+
+// ------------ Variables ------------- //
+$blue: #4078AD;
+$dark-blue: #1C2F3F;
+$very-dark: #1c2a37;
+$light-blue: #88B0E8;
+$white: #ffffff;
+$gray: #8f9098;
+$light-gray: #f8f8fb;
+
+// ------------ Navbar Styles ------------ //
+
+#logonav {
+  background-color: $blue;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  .nav_logo {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    .logo {
+      width: 400px;
+    }
+  }
+}
+
+nav {
+  border: none;
+  background-color: $dark-blue;
+  font-family: "Open-Sans", Helvetica, sans-serif;
+  font-size: 14px;
+  border-radius: 0px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0 auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  .nav_logo {
+    background-color: $blue;
+  }
+  .nav_links {
+    text-align: center;
+    ul {
+    }
+    li {
+      list-style-type: none;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      &:hover {
+        color: $white;
+        background-color: $very-dark;
+      }
+    a {
+      &:active {
+        background-color: $blue;
+        color: $white;
+      }
+      text-decoration: none;
+      color: $white;
+      }
+    }
+  }
+}
+
+
+
+// ------------ Global Styles ------------- //
+
+.button {
+  font-family: "Open-Sans", Helvetica, sans-serif;
+  border: none;
+  outline: none;
+  padding: 1.5rem 3rem;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  cursor:pointer;
+}
+
+.button3 {
+  box-shadow: inset 0px 0px 0px 2px $blue;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  color: $blue;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  &:hover {
+    background-color: $blue;
+    color: $white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  }
+}
+
+
+#hero {
+z-index: 2;
+width: 100%;
+background-image: url(/images/yellleader.png);
+background-repeat: no-repeat;
+background-position: center;
+top: 0;
+right: 0;
+left: 0;
+bottom: 50px;
+background-color: $dark-blue;
+  .hero_content {
+    padding-top: 14rem;
+    padding-bottom: 14rem;
+    h1 {
+      margin-top: -1rem;
+      font-family: "College Block", serif;
+      font-size: 60px;
+      color: $white;
+      text-align: left;
+      text-transform: uppercase;
+      text-shadow: 0px 0px 30px rgba(0,0,0,0.5);
+      letter-spacing: 3px;
+      line-height: 70px;
+      font-weight: 400;
+    }
+    h3 {
+      font-family: "Open-Sans", helvetica, sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: $white;
+      text-align: left;
+      line-height: 30px;
+      text-shadow: 0px 0px 30px rgba(0,0,0,0.3);
+      max-width: 80%;
+      padding-top: 2rem;
+    }
+  }
+  .hero_vote {
+    margin-top: 12rem;
+    border-radius: 7px;
+    padding: 2rem 3rem 2rem 3rem;
+    background-color: $white;
+    box-shadow: 0 0 30px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0 0 30px rgba(0,0,0,0.05);
+    -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.05);
+      h2 {
+        font-family: "College Block", helvetica, sans-serif;
+        font-size: 28px;
+        line-height: 36px;
+        color: $blue;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 3rem;
+      }
+      h3 {
+        font-family: "Open-Sans", helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: $gray;
+        text-align: center;
+        line-height: 30px;
+      }
+  }
+  .hero_subpages {
+    .meetcason, .ourteam, .getinvolved {
+      background-color: $white;
+      border-radius: 7px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.05);
+      -moz-box-shadow: 0 0 30px rgba(0,0,0,0.05);
+      -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.05);
+      overflow: hidden;
+      &:hover {
+        box-shadow: 0 0 60px rgba(0,0,0,0.5);
+        -moz-box-shadow: 0 0 60px rgba(0,0,0,0.5);
+        -webkit-box-shadow: 0 0 60px rgba(0,0,0,0.5);
+        h2 {
+          font-size: 32px;
+          transition-duration: .2s;
+        }
+      }
+      .image {
+        height: 75px;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      h2 {
+        font-family: "College Block", sans-serif;
+        font-size: 28px;
+        line-height: 36px;
+        color: $dark-blue;
+        text-align: center;
+        text-transform: uppercase;
+        padding-top: 2rem;
+        letter-spacing: 1px;
+      }
+      h3 {
+        font-family: "Open-Sans", helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: $gray;
+        text-align: center;
+        line-height: 24px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 3rem;
+      }
+    }
+  }
+  .meetcason {
+      .image {
+      background-image: url(/images/yell2.png);
+    }
+  }
+  .ourteam {
+      .image {
+      background-image: url(/images/team.png);
+    }
+  }
+  .getinvolved {
+      .image {
+      background-image: url(/images/involved.png);
+    }
+  }
+}
+
+// ------------ Footer Styles ----------- //
+
+.footer2 {
+  padding: 3rem 0 6rem 0;
+  margin-top: 0;
+}
+footer {
+  background-color: $dark-blue;
+  padding: 18rem 0 6rem 0;
+  margin-top: -13rem;
+  }
+  .contact {
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 7rem;
+    h1 {
+        margin-top: -1rem;
+        font-family: "Roboto Slab", serif;
+        font-size: 48px;
+        color: $white;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    .button2 {
+      font-size: 18px;
+      margin-top: 3rem;
+    }
+  }
+  .footernav {
+    overflow: hidden;
+    padding-top: 4rem;
+    ul {
+      list-style-type: none;
+      line-height: 36px;
+      height: 200px;
+    }
+    li {
+      font-family: "Open-Sans", helvetica, sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: $gray;
+    }
+    .title {
+      font-family: "College Block", sans-serif;
+      font-size: 14px;
+      color: $blue;
+      text-align: left;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .page {
+      font-family: "Open-Sans", helvetica, sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: $white;
+      cursor:pointer;
+      &:hover {
+        color: $blue;
+        text-shadow: 0px 0px 30px rgba(0,0,0,0.1);
+      }
+    }
+  }
+
+#about {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  background-color: $light-gray;
+  .about_body {
+    h2 {
+      font-family: "College Block", helvetica, sans-serif;
+      font-size: 36px;
+      line-height: 36px;
+      color: $blue;
+      text-align: left;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 3rem;
+    }
+    p {
+      font-family: "Open-Sans", helvetica, sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: $gray;
+      text-align: left;
+      line-height: 30px;
+    }
+  }
+  .quick_facts {
+    background-color: $white;
+    border-radius: 7px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0 0 30px rgba(0,0,0,0.05);
+    -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.05);
+    overflow: hidden;
+    padding-bottom: 2rem;
+    margin-top: -1rem;
+    .image {
+      height: 125px;
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url(/images/yell2.png);
+    }
+    h3 {
+      font-family: "Open-Sans", helvetica, sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: $gray;
+      text-align: center;
+      line-height: 30px;
+    }
+    h2 {
+      font-family: "College Block", helvetica, sans-serif;
+      font-size: 24px;
+      line-height: 36px;
+      color: $blue;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+    }
+  }
+  .social {
+    a {
+    text-decoration: none;
+    }
+    .white {
+      display: hidden;
+    }
+    .social_link {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      background-color: $white;
+      border-radius: 7px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.05);
+      -moz-box-shadow: 0 0 30px rgba(0,0,0,0.05);
+      -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.05);
+      overflow: hidden;
+      text-align: center;
+      font-family: "Open-Sans", helvetica, sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: $gray;
+      line-height: 30px;
+      .social_icon {
+        img {
+          height: 23px;
+          width: 23px;
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    .twitter {
+      &:hover {
+        font-weight: 600;
+        background-color: #00aced;
+        color: $white;
+      }
+    }
+    .facebook {
+      &:hover {
+        font-weight: 600;
+        background-color: #3b5998;
+        color: $white;
+      }
+    }
+    .instagram {
+      &:hover {
+        font-weight: 600;
+        background: #f09433;
+        background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+        background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+        color: $white;
+      }
+    }
+  }
+}
+
+
+#team {
+  padding-top: 4rem;
+  padding-bottom: 7rem;
+  background-color: $light-gray;
+  .section_header {
+    h2 {
+      font-family: "College Block", helvetica, sans-serif;
+      font-size: 36px;
+      line-height: 36px;
+      color: $blue;
+      text-align: left;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: -2rem;
+    }
+    p {
+      font-family: "Open-Sans", helvetica, sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: $gray;
+      text-align: left;
+      line-height: 30px;
+    }
+  }
+  .members {
+    .member {
+      background-color: $white;
+      border-radius: 7px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.05);
+      -moz-box-shadow: 0 0 30px rgba(0,0,0,0.05);
+      -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.05);
+      overflow: hidden;
+      padding-bottom: 2rem;
+      margin-top: 7rem;
+      .image {
+        height: 125px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .jm {
+        background-image: url(/images/johnmichael.jpg);
+      }
+      .ds {
+        background-image: url(/images/ds.jpg);
+      }
+      .mm {
+        background-image: url(/images/mm.jpg);
+      }
+      .lw {
+        background-image: url(/images/lw.jpg);
+        background-position: top center;
+      }
+      .cs {
+        background-image: url(/images/cs.jpg);
+      }
+      .ar {
+        background-image: url(/images/ar.jpg);
+      }
+      .ks {
+        background-image: url(/images/ks.jpg);
+        background-position: top center;
+      }
+      .tj {
+        background-image: url(/images/tj.jpg);
+        background-position: top center;
+      }
+      .gj {
+        background-image: url(/images/gj.jpg);
+      }
+      .ca {
+        background-image: url(/images/ca.jpg);
+      }
+      h3 {
+        font-family: "Open-Sans", helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: $gray;
+        text-align: center;
+        line-height: 24px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      h2 {
+        font-family: "College Block", helvetica, sans-serif;
+        font-size: 20px;
+        color: $dark-blue;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 3rem;
+        margin-bottom: -1rem;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+#media {
+  padding-top: 4rem;
+  padding-bottom: 7rem;
+  background-color: $light-gray;
+  .section_header {
+    h2 {
+      font-family: "College Block", helvetica, sans-serif;
+      font-size: 36px;
+      line-height: 36px;
+      color: $blue;
+      text-align: left;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: -2rem;
+    }
+    p {
+      font-family: "Open-Sans", helvetica, sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: $gray;
+      text-align: left;
+      line-height: 30px;
+    }
+  }
+    .video {
+      background-color: $white;
+      border-radius: 7px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.05);
+      -moz-box-shadow: 0 0 30px rgba(0,0,0,0.05);
+      -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.05);
+      overflow: hidden;
+      padding-bottom: 2rem;
+      margin-top: 7rem;
+      .vid {
+        height: 150px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      h2 {
+        font-family: "College Block", helvetica, sans-serif;
+        font-size: 20px;
+        color: $dark-blue;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 3rem;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+
+#involved {
+  padding-top: 5rem;
+  padding-bottom: 7rem;
+  background-color: $light-gray;
+  .section_header {
+    margin-bottom: 6rem;
+    h3 {
+      font-family: "Open-Sans", helvetica, sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      color: $gray;
+      text-align: center;
+      line-height: 30px;
+      margin-top: 3rem;
+    }
+    h2 {
+      font-family: "College Block", helvetica, sans-serif;
+      font-size: 36px;
+      line-height: 36px;
+      color: $blue;
+      text-align: left;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: -2rem;
+    }
+  }
+  input[type=text] {
+      padding: 1.5rem 1rem 1.5rem 0;
+      margin-bottom: 3rem;
+      padding-left: 2rem;
+      box-sizing: border-box;
+      border: 2px solid $gray;
+      border-radius: 7px;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $gray;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      background-color: transparent;
+      background-repeat: no-repeat;
+  }
+
+  ::-webkit-input-placeholder {
+    color: $gray;
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+    color: $gray;
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+    color: $gray;
+  }
+
+  :-ms-input-placeholder {
+    color: $gray;
+  }
+  .submit_center {
+    float: none;
+    margin: 0 auto;
+  }
+  input[type=submit] {
+    font-family: "Open-Sans", Helvetica, sans-serif;
+    border: none;
+    outline: none;
+    padding: 1.5rem 2rem;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    cursor:pointer;
+    background-color: $blue;
+    color: $white;
+    margin: 0 auto;
+    width: 200px;
+    &:hover {
+      background-color: $blue;
+      color: $white;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      -moz-box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      -webkit-box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+  }
+  textarea {
+    padding: 2rem 1rem 2rem 0;
+    margin-bottom: 3rem;
+    padding-left: 2rem;
+    box-sizing: border-box;
+    border: 2px solid $gray;
+    border-radius: 7px;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $gray;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: transparent;
+    background-repeat: no-repeat;
+  }
+}
